@@ -1,0 +1,18 @@
+Questão 2 
+A) As 4 etapas do processo de compilação são:
+-Análise léxica,
+-Análise sintática,
+-Análise semântica e
+-Geração de código
+
+Análise léxica: é a primeira fase do compilador, é responsável por ler o código fonte (caractere a caractere) buscando a separação e identificação dos componoentes do programa-fonte. Também é responsabilidade dessa fase a eliminação dos elemntos decorativos do programa (espaços em branco, etc).
+Análise sintática: é o processo de se determinar se uma cadeia de símbolos léxicos pode ser gerada por uma gramática.[25] O analisador sintático é o cerne do compilador, responsável por verificar se os símbolos contidos no programa fonte formam um programa válido, ou não. 
+Análise semântica: O papel do analisador semântico é prover métodos pelos quais as estruturas construídas pelo analisador sintático possam ser avaliadas ou executadas.
+Geração de código: dividida em geração de código intermediário, otimização de código e geração do código final. Na fase de geração de código intermediário, ocorre a transformação da árvore sintática em uma representação intermediária do código fonte. Esta linguagem intermediária é mais próxima da linguagem objeto do que o código fonte, mas ainda permite uma manipulação mais fácil do que se código assembly ou código de máquina fosse utilizado.A otimização de código é a estratégia de examinar o código intermediário, produzido durante a fase de geração de código com objetivo de produzir, através de algumas técnicas, um código que execute com bastante eficiência.A fase de geração de código final é a última fase da compilação. A geração de um bom código objeto é difícil devido aos detalhes particulares das máquinas para os quais o código é gerado. Contudo, é uma fase importante, pois uma boa geração de código pode ser, por exemplo, duas vezes mais rápida que um algoritmo de geração de código ineficiente.
+
+B)
+-static: não demanda dependência dinâmica de bibliotecas no momento da execução para rodar. 
+-g: inclui no arquivo executável elementos utilizados pelos programas de depuração,como o gdb ou ddd.
+o3: realiza otimizações para melhorar o desempenho da execução do código. 
+-Wall: é utilizado para exibir todos os alertas referentes à compilação.
+
