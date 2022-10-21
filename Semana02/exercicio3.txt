@@ -1,2 +1,43 @@
 Semana 2: Exercício 3
+Ex1:
+#include <stdio.h>
+
+int main() {
+        puts("Hello!");
+        return 0;
+
+}
+Para compilar:
+'gcc <nome_programa.c> -o <nome_programa>
+
+Se o código não for um programa, pode-se compilar e se retornar um objeto (.o):
+'gcc -c <nome_programa.c> -o <nome_programa.o>
+
+Se o código tiver alguma dependência (biblioteca criada pelo usuário, não padrãodo sistema) que não estiver no mesmo diretório que o código a ser compilado (ou em um nível diferente da hierarquia de diretórios, basta compilar da seguinte maneira:
+gcc -c <nome_programa.c> -I <diretório_da_dependencia> -o <nome_programa.o>
+
+Caso se queira compilar um código fonte a partir de objetos .o em uma outro diretório, faz-se
+gcc <nome_programa.c> <diretorio_arquivos_.o/arquivo.o> ... -I <diretorio_das_dependencias> -o <nome_arquivo_compilado>
+
+
+
+## Makefile
+#Criação de variáveis para utilização no caminho dos diretórios, isso permite que modificações sejam feitas rapidamente em caso de mudança de diretório dos arquivos a serem compilados.
+
+SRC = ./src
+HOMEV = /home/vinicius
+
+
+
+all:
+	echo "Aqui, coloca-se a(s) instrução(ões) de compilação de todos os arquivos dos quais o programa fonte depende".
+	echo "utiliza-se as variáveis criadas da seguinte maneira"
+	echo "$(HOMEV)/Downloads
+
+run:
+	echo "Aqui, coloca-se o caminho para execução do programa que desejado, para essa execução, deve-se digitar no terminal 'make run"
+
+clean:
+	echo "Aqui, coloca-se a instrução para deleção dos arquivos das pastas desejas, para a execução dessa ação, basta digitar 'make clean'"
+	#rm ./bin/* ./obj/*
 
