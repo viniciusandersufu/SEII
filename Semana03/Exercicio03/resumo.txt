@@ -1,1 +1,10 @@
 ## Resumo do capítulo 3
+
+-Processos rodam desde o momento em que ligamos o computador. 
+-Programas podem rodas vários processos (multifunções e robutez).
+-PID: identificação do processo, o PID é criado pelo sistema operacional como um número de 16 bits de maneira sequencial quando o processo é criado
+-Processos tem pais e podem ter filhos, o processo no top dessa hierarquia é o 'init'.
+-Um programa que capta e mostra o PID e o PPID pode mostrar diferentes PIDs se rodado várias vezes (um novo processo é criado a cada execução do programa), mas sempre mostrará um mesmo PPID se for executado no mesmo 'shell' (o processo pai do shell é sempre o mesmo).
+- ps para mostrar os processos controlados pelo terminal onde o comando foi executado.
+- ps -e -o pid, ppid, command - mostra todos os processos rodando na máquina, o seu PID, PPID e o comando rodando no processo. 
+- Pode-se encerrar um processo usando o comando 'kill' e informando o PID do processo
