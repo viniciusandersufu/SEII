@@ -1,0 +1,33 @@
+1) qual o limite de bytes a serem enviados por pacotes TCP e UDP?
+
+    O protocolo TCP permite o uso de pacotes com até 64 kbytes (65536 bytes em um payload).
+    
+    O tamanho máximo possível para um datagrama UDP é de 65.507 bytes 
+    (65.535 − 8 bytes do cabeçalho UDP − 20 bytes do cabeçalho IP), 
+    devido ao protocolo IPv4. Em IPv6 é possível termos pacotes de tamanho maior do que 65.535.
+
+2) como um arquivo grande pode ser transmitido via internet?
+    
+    Um arquivo grande pode ser enviado pela internet por meio da divisão do arquivo
+    em pacotes menores de dados a serem enviados por UDP ou TCP.
+
+    No entanto, a comunicação UDP nao oferece confiabilidade total na entrega dos pacotes.
+    Já o TCP, ele oferece essa segurança, o que o torna mais adequado para o envio de grandes
+    arquivos, já que um pacote corrompido ou não entregue pode comprometer a integridade do 
+    arquivo a ser enviado.
+
+3) qual a diferença entre as implementações TCP e UDP para esse problema?
+
+    Graças a confiabilidade e ordem na entrega de pacotes, o TCP se torna ideal
+    para transmissão de grandes arquivos que querem integridade de dados, como é
+    necessário em downloads.
+
+    Por outro lado, o UDP é recomendado para comunicação e transmissão de dados
+    que não requerem essa integridade porém exigem uma grande taxa/velocidade
+    de transmissão, como em programas e sites que transmitem áudio e vídeo (serviços de
+    streaming por exemplo).
+
+    Devida a sua confiabilidade e ordenação na entrega de pacotes, TCP é ideal para
+    serviçõs que requerem conexão e integridade de dados, como é é comumente necessário
+    em downloads. UDP é recomendado para comunicação de dados que não necessitam de 
+    integridade acima de velocidade, como ocorre em aplicações de comunicação por vídeo
