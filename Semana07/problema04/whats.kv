@@ -1,0 +1,194 @@
+BoxLayout:
+    canvas:
+		Color:
+			rgba: 0.92,0.92,0.92,1 
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    orientation:'vertical'
+    AppBar:
+    Menu:
+    ScrollView:
+        BoxLayout:
+            size_hint_y:None
+            height:self.minimum_height
+            orientation:'vertical'
+            Chat:
+            Chat2:
+            Chat:
+            Chat2:
+            Chat:
+            Chat2:
+            Chat:
+            Chat:
+            Widget:
+
+
+<AppBar@BoxLayout>:
+    padding:'6dp'
+    canvas:
+        Color:
+            rgba: 0,0.3,0.13,1
+        Rectangle:
+            size:self.size
+            pos:self.pos
+    size_hint_y:None
+    height:'50dp'
+    Label:
+        text:'ZapZap'
+        bold:True
+        font_size:'20dp'
+        haling:'left'
+        text_size:self.size
+        valign:'center'
+        padding_x:'10dp'
+    Icon:
+        background_normal:'lupa.png'
+        active:True
+    Icon:
+        background_normal:'pontos.png'
+        active:True
+
+<Foto@Widget>:
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Ellipse:
+            source:'zika.png'
+            size:self.size
+            pos:self.pos
+    size_hint_x:None
+    width:self.height
+
+<Foto2@Widget>:
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Ellipse:
+            source:'chavoso.png'
+            size:self.size
+            pos:self.pos
+    size_hint_x:None
+    width:self.height
+
+<Menu@BoxLayout>:
+    canvas:
+        Color:
+            rgba: 0,0.3,0.13,1 
+        Rectangle:
+            size:self.size
+            pos:self.pos
+    size_hint_y:None
+    height:'35dp'
+    padding:'3dp'
+    spacing:'10dp'
+    Icon:
+        background_normal:'camera.png'
+    MenuButton:
+        text:'CONVERSAS'
+        active:True
+    MenuButton:
+        text: 'STATUS'
+    MenuButton:
+        text: 'CHAMADAS'
+
+<Chat2@BoxLayout>:
+    canvas:
+        Color:
+            rgba:0,0,0,0.4
+        Line:
+            width:1
+            points:self.x+self.height,self.y,self.x+self.width-20,self.y
+    size_hint_y:None
+    height:'100dp'
+    padding:'10dp'
+    Foto2:
+    BoxLayout:
+        orientation:'vertical'
+        padding:'13dp'
+        Label:
+            text:'Tr0p4 dos Ch4ve'
+            font_size:'30dp'
+            bold:True
+            color:(0,0,0,1)
+            text_size:self.size
+            halign:'left'
+            valign:'center'
+        Label:
+            text:'W1lkerzim: fla tropa'
+            font_size:'30dp'
+            color:(0,0,0,0.8)
+            text_size:self.size
+            halign:'left'
+            valign:'center'
+    BoxLayout:
+        size_hint_x:None
+        width:'100dp'
+        padding:'7dp'
+        Label:
+            text:'23:01'
+            color:(0,0,0,0.8)
+            text_size:self.size
+            font_size:'25dp'
+            valign:'top' 
+            halign:'right'
+
+<Chat@BoxLayout>:
+    canvas:
+        Color:
+            rgba:0,0,0,0.4
+        Line:
+            width:1
+            points:self.x+self.height,self.y,self.x+self.width-20,self.y
+    size_hint_y:None
+    height:'100dp'
+    padding:'10dp'
+    Foto:
+    BoxLayout:
+        orientation:'vertical'
+        padding:'13dp'
+        Label:
+            text:'Chat ou Grupo do ZapZap'
+            font_size:'30dp'
+            bold:True
+            color:(0,0,0,1)
+            text_size:self.size
+            halign:'left'
+            valign:'center'
+        Label:
+            text:'Mlk Ch4ve: a última mensagem do chat'
+            font_size:'30dp'
+            color:(0,0,0,0.8)
+            text_size:self.size
+            halign:'left'
+            valign:'center'
+    BoxLayout:
+        size_hint_x:None
+        width:'100dp'
+        padding:'7dp'
+        Label:
+            text:'23:01'
+            color:(0,0,0,0.8)
+            text_size:self.size
+            font_size:'25dp'
+            valign:'top' 
+            halign:'right'
+    
+<MenuButton@Button>:
+    active: False
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Line:
+            width: 2 if root.active else 0.1
+            points:self.x, self.y, self.x+self.width, self.y
+    background_color:0,0,0,0
+    bold:True
+    color:(1,1,1,1) if root.active else (1,1,1,0.5)
+
+<Icon@Button>:
+    active:False
+    size_hint_x:None
+    width:self.height
+    border: 0,0,0,0
+    background_color: (1,1,1,1) if root.active else (1,1,1,0.5)
